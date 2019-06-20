@@ -14,16 +14,16 @@ login.addEventListener("click", function(e){
 
 });
 
-function close(e){
-  if(e.target != this){
+function close(e) {
+    if (e.target != this) {
         return;
-    } 
+    }
     console.log(this);
     console.log(e.target);
-    
-    
-        modalWrapper.style.display = "none";
-        modal.style.display = "none";  
+
+
+    modalWrapper.style.display = "none";
+    modal.style.display = "none";
 }
 
 loginBtn.addEventListener("click", close);
