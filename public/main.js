@@ -26,7 +26,21 @@ function close(e) {
     modal.style.display = "none";
 }
 
-loginBtn.addEventListener("click", close);
+function loginn() {
+  
+    axios.get('/artists')
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    
+    
+}
+
+
+loginBtn.addEventListener("click", loginn);
 cancelBtn.addEventListener("click", close);
 modalWrapper.addEventListener("click", close);
 closeBtn.addEventListener("click", close);

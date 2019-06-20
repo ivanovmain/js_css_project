@@ -1,7 +1,5 @@
 var express = require('express');
 var app = express();
-
-
 var artists = [
     {
         id: 1,
@@ -27,9 +25,9 @@ app.get('/', function(req, res){
     res.send('hello API');
 })
 
-app.get('/artists', function(req, res){
+app.get('/artists', async function(req, res){
     
-    res.send(artists);
+    res.json(artists);
 });
 
 app.get('/artists/:id', function(req, res){
@@ -40,7 +38,7 @@ app.get('/artists/:id', function(req, res){
     res.send(artist);
 })
 
-app.listen(3012, function(){
+app.listen(3000, function(){
     console.log("Started");
     
 });
